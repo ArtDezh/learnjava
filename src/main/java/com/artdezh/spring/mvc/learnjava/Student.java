@@ -8,7 +8,8 @@ public class Student extends Person {
         this.university = university;
     }
 
-    public void study() {
-        System.out.println(getName() + " учится в университете " + university);
+    @Override
+    public void introduce() {
+        System.out.println("Меня зовут " + getName() + ", я студент университета " + university);
     }
 }

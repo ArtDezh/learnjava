@@ -1,16 +1,12 @@
 package com.artdezh.spring.mvc.learnjava;
 
-public class Person {
+public abstract class Person {
     private String name;
     private int age;
 
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
-    }
-
-    public void introduce() {
-        System.out.println("Меня зовут " + name + ", мне " + age + " лет");
     }
 
     public String getName() {
@@ -20,4 +16,6 @@ public class Person {
     public int getAge() {
         return age;
     }
+
+    public abstract void introduce();
 }
