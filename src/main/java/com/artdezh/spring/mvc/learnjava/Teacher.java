@@ -15,4 +15,9 @@ public class Teacher extends Person {
     public void teach() {
         System.out.println(getName() + " преподает " + subject);
     }
+
+    @Override
+    public void introduce() {
+        System.out.println("Меня зовут " + getName() + ", я преподаватель " + subject);
+    }
 }
