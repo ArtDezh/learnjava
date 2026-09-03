@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int n = readInput();
-        String result = sumDigits(stringToChar(intToString(n)));
+        String result = "Сумма цифр числа " + n + " равна " + sumDigits(stringToChar(intToString(n)));
 
         System.out.println(result);
     }
@@ -25,12 +25,9 @@ public class Main {
 
     public static String sumDigits(char[] chars) {
         int sumResult = 0;
-        for (int i = 0; i < chars.length; i++) {
-            sumResult += Integer.parseInt(String.valueOf(chars[i]));
+        for (char aChar : chars) {
+            sumResult += Integer.parseInt(String.valueOf(aChar));
         }
-
         return String.valueOf(sumResult);
     }
-
-
 }
