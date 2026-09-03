@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int n = readInput();
-        List<Long> result = printFibonacci(n);
+        List<Long> result = createFibonacci(n);
         System.out.println(result);
 
     }
@@ -17,12 +17,12 @@ public class Main {
         return Integer.parseInt(scanner.nextLine().trim());
     }
 
-    public static List<Long> printFibonacci(int count) {
+    public static List<Long> createFibonacci(int count) {
         int first = 0;
         int second = 1;
         List<Long> listResult = new ArrayList<>();
         listResult.addFirst(0L);
-        for (int i = 1; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             //System.out.print(first + " ");
 
             int next = first + second;
@@ -30,6 +30,8 @@ public class Main {
             second = next;
             listResult.add((long) first);
         }
+        if (count != 1) listResult.remove(listResult.size() - 1);
+        if (count <= 0) listResult.add(0L);
         return listResult;
     }
 }
